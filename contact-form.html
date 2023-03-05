@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contact Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- start styling css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            background: #090808;
+        }
+        .container{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 350px;
+            height: 100%;
+            padding: 30px;
+            background-color: #1B1B1B;
+            border-radius: 10px;
+            color: #a7a7a7;
+        }
+        .form-title{
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #0597F2;
+        }
+        .form button{
+            background-color: #0597F2;
+            height: 30px;
+            width: 100%;
+            color: #f2f2f2;
+            margin: 0 auto;
+            border: none;
+            border-radius: 20px;
+        }
+        .form{
+            border-radius: 10px;
+        }
+        .form fieldset{
+            border: 1px solid #a7a7a7;
+            border-radius: 30px;
+            padding: 5px 20px;
+        }
+        .form legend{
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 0 5px;
+        }
+        .form-container i{
+            position: absolute;
+        }
+        .form-container{
+            display: flex;
+            align-items: center;
+        }
+        .form-container input{
+            height: 30px;
+            width: 100%;
+            border: none;
+            margin-left: 25px;
+            background-color: transparent;
+            color: #0597F2;
+        }
+
+        .form-container input:focus, .form-container textarea:focus{
+            outline: none;
+            caret-color: #0597F2;
+            color: #0597F2;
+        }
+        .form-container input::placeholder, .form-container textarea::placeholder{
+            color: #6c6c6c;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .form-container textarea{
+            border: none;
+            background-color: transparent;
+            color: #0597F2;
+            padding-top: 10px;
+            resize: none;
+        }
+        .form-container input:focus::placeholder{
+            color: #0597F2;
+        }
+        .form-container input:focus  ~ i{
+            color: #0597F2;
+        }
+    </style>
+    <!-- end styling css -->
+    <div class="container">
+        <div class="form-title">Contact Us</div>
+            <form action="" class="form">
+
+                <fieldset class="fieldset" id="myFieldset">
+                    <legend id="myLegend">Your Name</legend>
+                    <div class="form-container">
+                        
+                        <input type="text" name="" id="myInput" placeholder="Jhonny" required>
+                        <i class='bx bx-user'></i>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset id="myFieldset">
+                    <legend id="myLegend">E-Mail Address</legend>
+                    <div class="form-container">
+                        <input type="email" name="" id="myInput" placeholder="example@gmail.com" required>
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset id="myFieldset">
+                    <legend id="myLegend">Phone Number</legend>
+                    <div class="form-container">
+                        <input type="number" name="" id="myInput" placeholder="+62 812 3456 7890" required>
+                        <i class='bx bx-phone' ></i>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset id="myFieldset">
+                    <legend id="myLegend">Message</legend>
+                    <div class="form-container">
+                        <textarea name="" id="myInput" cols="30" rows="10" placeholder="Enter something..."></textarea>                    </div>
+                </fieldset>
+                <br>
+                <button type="submit">Send</button>
+            </form>
+    </div>
+
+    <script>
+        const input = document.getElementById("myInput");
+        const fieldset = document.getElementById("myFieldset");
+        const legend = document.getElementById("myLegend");
+
+        input.addEventListener("click", () =>{
+            fieldset.style.borderColor="#0597F2"
+            legend.style.color="#0597F2"
+        })
+    </script>
+</body>
+</html>
